@@ -9,20 +9,20 @@ export default function Navbar() {
   }
   return (
     <nav>
-      <Link href={'/'}>Home</Link>
-      <Link href={'/'}>Post</Link>
-      <Link href={'/tutorial'}>Tutorial</Link>
-      <Link href={'/'}>Discuss</Link>
-      <Link href={'/'}>Question</Link>
-      <Link href={'/'}>Author</Link>
-      <VscColorMode className="nav-icon"/>
+      <Link className='nav-link home' href={'/'}>Home</Link>
+      <Link className='nav-link' href={'/post'}>Post</Link>
+      <Link className='nav-link' href={'/tutorial'}>Tutorial</Link>
+      <Link className='nav-link' href={'/discuss'}>Discuss</Link>
+      <Link className='nav-link' href={'/question'}>Question</Link>
+      <Link className='nav-link' href={'/author'}>Author</Link>
+      <VscColorMode size="1.5rem" className="nav-icon"/>
       <div className="search-box">
-        <input className="search-input" />
+        <input className="search-input hidden" />
         <div className="search-icon">
-          <IoIosSearch />
+          <IoIosSearch className="nav-icon"/>
         </div>
       </div>
-      <IoIosLogIn className="nav-icon"/>
+      <IoIosLogIn size="1.5rem" className="nav-icon authen-icon"/>
     </nav>
   )
 }
