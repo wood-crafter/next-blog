@@ -1,0 +1,36 @@
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+  border: 0.05rem solid rgb(170, 164, 164);
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  border-left: 0;
+}
+
+.search-input {
+  height: 1.5rem;
+  padding: 0;
+  border: 0.05rem solid rgb(170, 164, 164);
+  border-radius: 5% 0 0 5%;
+}
+
+.search-input:focus {
+  border: 0.05rem solid rgb(115, 148, 219);
+  outline: none;
+}
+
+.nav-icon {
+  height: 100%;
+}
