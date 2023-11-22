@@ -44,6 +44,7 @@ nav {
 .search-box {
   display: flex;
   align-items: center;
+  justify-content: end;
 }
 
 .search-icon {
@@ -55,10 +56,11 @@ nav {
 }
 
 .search-input {
-  height: 1.5rem;
+  height: 90%;
+  flex-grow: 1;
   padding: 0;
   border: 0.05rem solid var(--default-search-border);
-  border-radius: 5% 0 0 5%;
+  border: 0;
 }
 
 .search-input:focus {
@@ -82,4 +84,37 @@ nav {
 
 .authen-icon {
   margin-right: 25%;
+}
+
+.nav-link-container {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  align-items: center
+}
+
+.input-hidden {
+  display: none;
+}
+
+.input-show {
+  height: 60%;
+  background-color: white;
+  border-radius: 1rem;
+  animation: growInput 0.2s forwards;
+  display: flex;
+  padding-left: 1rem;
+}
+
+.icon-black {
+  color: black;
+}
+
+@keyframes growInput {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
 }
