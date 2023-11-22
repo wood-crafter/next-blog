@@ -38,13 +38,14 @@ nav {
   justify-content: center;
   background-color: white;
   flex-grow: 0;
-  margin-right: 2.5%;
+  margin-right: 1.5%;
 }
 
 .search-box {
   display: flex;
   align-items: center;
   justify-content: end;
+  margin-left: 2.5%;
 }
 
 .search-icon {
