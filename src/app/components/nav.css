@@ -65,8 +65,7 @@ nav {
 }
 
 .search-input:focus {
-  border: 0.05rem solid var(--default-search-focus-border);
-  outline: none;
+  outline: none !important;
 }
 
 .nav-icon {
