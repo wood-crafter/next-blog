@@ -29,12 +29,12 @@ export default function Navbar() {
         <div className={`search-box ${isShowingSearch ? 'input-show' : ''}`}>
           {isShowingSearch && <input className='search-input'/>}
           <div className="search-icon" onClick={handleSearchClick}>
-            <IoIosSearch className={`nav-icon ${isShowingSearch ? 'icon-black' : ''}`}/>
+            <IoIosSearch className={`nav-icon icon ${isShowingSearch ? 'icon-black' : ''}`}/>
           </div>
         </div>
       </div>
       <VscColorMode size="1.5rem" className="nav-icon"/>
-      <Link className="nav-icon authen-icon" href={'/login'}><IoIosLogIn size="1.5rem" /></Link>
+      <Link className="authen-icon" href={'/login'}><IoIosLogIn className="nav-icon" size="1.5rem" /></Link>
     </nav>
   )
 }

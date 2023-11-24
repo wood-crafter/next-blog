@@ -4,6 +4,7 @@
   --default-nav-background: rgb(35, 35, 35);
   --default-text-color: rgb(255, 255, 255);
   --default-nav-background-hover: rgb(84, 84, 84);
+  --default-nav-icon-hover: rgb(179, 179, 179);
 }
 
 nav {
@@ -24,6 +25,7 @@ nav {
   height: 60%;
   background-color: var(--default-nav-background);
   border-radius: 0.5rem;
+  text-decoration: none;
 }
 
 .nav-link:hover {
@@ -76,6 +78,7 @@ nav {
 
 .nav-icon:hover {
   cursor: pointer;
+  color: var(--default-nav-icon-hover);
 }
 
 .hidden {
