@@ -1,21 +1,27 @@
 'use client'
-import { useState } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import Link from 'next/link'
 import { IoIosSearch } from "react-icons/io"
 import { VscColorMode } from "react-icons/vsc"
 import { IoIosLogIn } from "react-icons/io"
 import Navlink from './Navlink'
 import { NAVLINKS } from '../constant/index'
+import { useIsNavSearching } from '../providers/use-setting'
 import './nav.css'
 
 export default function Navbar() {
+  const { isNavSearching, setIsNavSearching } = useIsNavSearching()
   const [isShowingSearch, setIsShowingSearch] = useState(false)
   const onSearch = () => {
   }
   const handleSearchClick = (e: React.MouseEvent) => {
     e.stopPropagation()
     setIsShowingSearch(!isShowingSearch)
+    setIsNavSearching('Show me on log')
   }
+  useEffect(() => {
+    console.info(isNavSearching)
+  }, [isNavSearching])
   return (
     <nav>
       <Link className='nav-link home' href={'/'}>Home</Link>
