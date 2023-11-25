@@ -5,7 +5,7 @@ import { IoIosSearch } from "react-icons/io"
 import { VscColorMode } from "react-icons/vsc"
 import { IoIosLogIn } from "react-icons/io"
 import Navlink from './Navlink'
-import { NAVLINKS } from '../constant/index'
+import { NAVLINKS, THEMES } from '../constant/index'
 import './nav.css'
 
 export default function Navbar() {
@@ -33,7 +33,14 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <VscColorMode size="1.5rem" className="nav-icon"/>
+      <div className="theme">
+        <VscColorMode size="1.5rem" className="nav-icon"/>
+        {THEMES.length && <div className='theme-container'>
+          {THEMES.map(item => (
+          <div>{item.name}</div>
+          ))}
+        </div>}
+      </div>
       <Link className="authen-icon" href={'/login'}><IoIosLogIn className="nav-icon" size="1.5rem" /></Link>
     </nav>
   )

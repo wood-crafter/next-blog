@@ -5,3 +5,7 @@ export const NAVLINKS = [
   {path: '/question', title: 'Question'},
   {path: '/question', title: 'Author'},
 ]
+export const THEMES = [
+  {name: 'dark/light'},
+  {name: 'light/dark'}
+]

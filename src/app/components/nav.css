@@ -121,3 +121,13 @@ nav {
     width: 70%;
   }
 }
+
+.theme {
+  position: relative;
+}
+
+.theme-container {
+  position: absolute;
+  bottom: auto;
+  background-color: white;
+}
