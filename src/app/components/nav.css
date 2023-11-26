@@ -124,6 +124,8 @@ nav {
 
 .theme {
   position: relative;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .theme-container {
