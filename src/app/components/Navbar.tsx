@@ -10,11 +10,17 @@ import './nav.css'
 
 export default function Navbar() {
   const [isShowingSearch, setIsShowingSearch] = useState(false)
+  const [isShowingTheme, setIsShowingTheme] = useState(false)
   const onSearch = () => {
   }
   const handleSearchClick = (e: React.MouseEvent) => {
     e.stopPropagation()
     setIsShowingSearch(!isShowingSearch)
+  }
+
+  const handleThemeClick = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    setIsShowingTheme(!isShowingTheme)
   }
   return (
     <nav>
@@ -34,8 +40,8 @@ export default function Navbar() {
         </div>
       </div>
       <div className="theme">
-        <VscColorMode size="1.5rem" className="nav-icon"/>
-        {THEMES.length && <div className='theme-container'>
+        <VscColorMode size="1.5rem" className="nav-icon" onClick={handleThemeClick}/>
+        {isShowingTheme && <div className='theme-container'>
           {THEMES.map(item => (
           <div>{item.name}</div>
           ))}
