@@ -43,7 +43,7 @@ export default function Navbar() {
         <VscColorMode size="1.5rem" className="nav-icon" onClick={handleThemeClick}/>
         {isShowingTheme && <div className='theme-container'>
           {THEMES.map(item => (
-          <div>{item.name}</div>
+          <div className='theme-item'>{item.name}</div>
           ))}
         </div>}
       </div>
