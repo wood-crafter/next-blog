@@ -1,3 +1,4 @@
+'use client'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar  from './components/Navbar'
@@ -10,10 +11,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const { isNavSearching, setIsNavSearching } = useIsNavSearching()
   return (
     <html lang="en">
-      <NavSearchingContext.Provider value={{ isNavSearching, setIsNavSearching }} >
+      <NavSearchingContext.Provider value={useIsNavSearching}>
         <Navbar />
         <body className={inter.className}>{children}</body>
       </NavSearchingContext.Provider>

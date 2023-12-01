@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useState } from 'react'
+import { createContext, useContext } from 'react'
 
 export const NavSearchingContext = createContext<any>(null)
 export const useIsNavSearching = () => {
