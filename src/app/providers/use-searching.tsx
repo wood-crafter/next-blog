@@ -1,8 +1,12 @@
-import { createContext, useContext } from 'react'
+import { ReactNode, createContext, useContext, useState } from 'react'
 
 export const NavSearchingContext = createContext<any>(null)
-export const useIsNavSearching = () => {
-  const { isNavSearching, setIsNavSearching } = useContext(NavSearchingContext)
+export const SearchContextProvider = ({ children }: any) => {
+  const [isNavSearching, setIsNavSearching] = useState(false)
 
-  return { isNavSearching, setIsNavSearching }
+  return (
+    <NavSearchingContext.Provider value={{ isNavSearching, setIsNavSearching }}>
+      {children}
+    </NavSearchingContext.Provider>
+  )
 }
