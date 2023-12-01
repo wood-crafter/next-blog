@@ -2,7 +2,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar  from './components/Navbar'
-import { NavSearchingContext, useIsNavSearching } from './providers/use-searching'
+import { SearchContextProvider } from './providers/use-searching'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,10 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <NavSearchingContext.Provider value={useIsNavSearching}>
+      <SearchContextProvider>
         <Navbar />
         <body className={inter.className}>{children}</body>
-      </NavSearchingContext.Provider>
+      </SearchContextProvider>
     </html>
   )
 }
