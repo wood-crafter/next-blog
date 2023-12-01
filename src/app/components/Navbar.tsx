@@ -15,9 +15,6 @@ export default function Navbar() {
     e.stopPropagation()
     setIsNavSearching(!isNavSearching)
   }
-  useEffect(() => {
-    console.info(isNavSearching)
-  }, [isNavSearching])
   return (
     <nav>
       <Link className='nav-link home' href={'/'}>Home</Link>
