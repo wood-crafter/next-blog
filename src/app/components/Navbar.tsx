@@ -22,7 +22,7 @@ export default function Navbar() {
     setIsShowingTheme(!isShowingTheme)
   }
   return (
-    <nav>
+    <div className='nav'>
       <Link className='nav-link home' href={'/'}>Home</Link>
       <div style={{display: 'flex', flexGrow: 1, justifyContent: 'end', height: '100%', alignItems: 'center'}}>
         {
@@ -32,7 +32,7 @@ export default function Navbar() {
           </div>
         }
         <div className={`search-box ${isNavSearching ? 'input-show' : ''}`}>
-          {isNavSearching && <input className='search-input'/>}
+          {isNavSearching && <input className='search-input' onClick={(e) => {e.stopPropagation()} }/>}
           <div className="search-icon" onClick={handleSearchClick}>
             <IoIosSearch className={`nav-icon icon ${isNavSearching ? 'icon-black' : ''}`}/>
           </div>
@@ -47,6 +47,6 @@ export default function Navbar() {
         </div>}
       </div>
       <Link className="authen-icon" href={'/login'}><IoIosLogIn className="nav-icon" size="1.5rem" /></Link>
-    </nav>
+    </div>
   )
 }
