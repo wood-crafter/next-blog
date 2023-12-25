@@ -6,12 +6,12 @@ import { VscColorMode } from "react-icons/vsc"
 import { IoIosLogIn } from "react-icons/io"
 import Navlink from './Navlink'
 import { NAVLINKS , THEMES } from '../constant/index'
-import { NavSearchingContext } from '../providers/use-searching'
+import { NavSearchingContext, ThemePickingContext } from '../providers/use-searching'
 import './nav.css'
 
 export default function Navbar() {
   const { isNavSearching, setIsNavSearching } = useContext(NavSearchingContext)
-  const [isShowingTheme, setIsShowingTheme] = useState(false)
+  const { isThemePicking, setIsThemePicking } = useContext(ThemePickingContext)
   const handleSearchClick = (e: React.MouseEvent) => {
     e.stopPropagation()
     setIsNavSearching(!isNavSearching)
@@ -19,7 +19,7 @@ export default function Navbar() {
 
   const handleThemeClick = (e: React.MouseEvent) => {
     e.stopPropagation()
-    setIsShowingTheme(!isShowingTheme)
+    setIsThemePicking(!isThemePicking)
   }
   return (
     <div className='nav'>
@@ -40,7 +40,7 @@ export default function Navbar() {
       </div>
       <div className="theme">
         <VscColorMode size="1.5rem" className="nav-icon" onClick={handleThemeClick}/>
-        {isShowingTheme && <div className='theme-container'>
+        {isThemePicking && <div className='theme-container'>
           {THEMES.map(item => (
           <div className='theme-item'>{item.name}</div>
           ))}
