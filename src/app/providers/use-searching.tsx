@@ -11,7 +11,7 @@ export const SearchContextProvider = ({ children }: any) => {
 
   return (
     <NavSearchingContext.Provider value={{ isNavSearching, setIsNavSearching, isThemePicking, setIsThemePicking }}>
-      <div className='layout-wrapper' onClick={handleLayoutClick} >{children}</div>
+      <div onClick={handleLayoutClick} >{children}</div>
     </NavSearchingContext.Provider>
   )
 }

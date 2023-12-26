@@ -5,8 +5,8 @@ import { IoIosSearch } from "react-icons/io"
 import { VscColorMode } from "react-icons/vsc"
 import { IoIosLogIn } from "react-icons/io"
 import Navlink from './Navlink'
-import { NAVLINKS , THEMES } from '../constant/index'
-import { NavSearchingContext } from '../providers/use-searching'
+import { NAVLINKS , THEMES } from '../app/constant/index'
+import { NavSearchingContext } from '../app/providers/use-searching'
 import './nav.css'
 
 export default function Navbar() {
