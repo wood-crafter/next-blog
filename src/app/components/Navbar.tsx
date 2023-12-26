@@ -6,12 +6,11 @@ import { VscColorMode } from "react-icons/vsc"
 import { IoIosLogIn } from "react-icons/io"
 import Navlink from './Navlink'
 import { NAVLINKS , THEMES } from '../constant/index'
-import { NavSearchingContext, ThemePickingContext } from '../providers/use-searching'
+import { NavSearchingContext } from '../providers/use-searching'
 import './nav.css'
 
 export default function Navbar() {
-  const { isNavSearching, setIsNavSearching } = useContext(NavSearchingContext)
-  const { isThemePicking, setIsThemePicking } = useContext(ThemePickingContext)
+  const { isNavSearching, setIsNavSearching, isThemePicking, setIsThemePicking } = useContext(NavSearchingContext)
   const handleSearchClick = (e: React.MouseEvent) => {
     e.stopPropagation()
     setIsNavSearching(!isNavSearching)
